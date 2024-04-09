@@ -27,7 +27,7 @@ def get_data():
 if __name__ == '__main__':
     # Post data
     print("Posting data to the database:")
-    post_data('Alice', 25)
+    post_data('Johnny', 35)
 
     # Get data
     print("\nGetting data from the database:")
