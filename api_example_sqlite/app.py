@@ -7,6 +7,12 @@ app = FastAPI()
 def get_connection():
     return sqlite3.connect('example.db')
 
+# Create the 'example' table if it doesn't exist
+conn = get_connection()
+cursor = conn.cursor()
+cursor.execute('''CREATE TABLE IF NOT EXISTS example
+                (name TEXT, age INTEGER)''')
+
 @app.get('/get_data')
 def get_data():
     # Create a new connection and cursor for each request
@@ -14,9 +20,12 @@ def get_data():
     cursor = conn.cursor()
 
     # Retrieve data from the SQLite database
-    cursor.execute("SELECT * FROM users")
+    cursor.execute("SELECT * FROM example")
     rows = cursor.fetchall()
-    data = [{'id': row[0], 'name': row[1], 'age': row[2]} for row in rows]
+    if rows:
+        return [{'name': row[0], 'age': row[1]} for row in rows]
+    else:
+        return []
     
     # Close the cursor and connection
     cursor.close()
@@ -31,7 +40,7 @@ def post_data(name: str, age: int):
     cursor = conn.cursor()
 
     # Insert data into the SQLite database
-    cursor.execute("INSERT INTO users (name, age) VALUES (?, ?)", (name, age))
+    cursor.execute("INSERT INTO example (name, age) VALUES (?, ?)", (name, age))
     conn.commit()
 
     # Close the cursor and connection
@@ -39,3 +48,5 @@ def post_data(name: str, age: int):
     conn.close()
 
     return {'message': 'Data inserted successfully'}
+
+# run this app with the following in terminal after making sure you are in the directory in your CLI-->  uvicorn app:app --reload
