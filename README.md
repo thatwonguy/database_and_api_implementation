@@ -4,7 +4,7 @@
 
 - ### Demo on usage of fastapi to utilize endpoints for end-users to tap into data.
 ---
-- it is a serverless database that holds the data outside of memory but not on the cloud
+Sqlite is a serverless database that holds the data outside of memory but not on the cloud.
 1. `sqlite_user.py` is a standalone file example to demonstrate usage of sqlite
 2. `api_example` is a folder containing two separate python scripts that use api calls to tap into each other
      - `app.py` is a python file that allows for **GET** and **POST** requests
