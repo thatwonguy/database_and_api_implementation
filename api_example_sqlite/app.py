@@ -34,14 +34,18 @@ def get_data():
         return []
 
 @app.post('/post_data')
-def post_data(name: str, age: int):
+def post_data(data: dict):
+    name = data.get('name')
+    age = data.get('age')
+    if not name or not age:
+        raise HTTPException(status_code=400, detail="Name and age are required")
+
     # Create a new connection and cursor for each request
     conn = get_connection()
     cursor = conn.cursor()
 
     # Insert data into the SQLite database
     cursor.execute("INSERT INTO example (name, age) VALUES (?, ?)", (name, age))
-    
     conn.commit()
 
     # Close the cursor and connection
