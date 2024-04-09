@@ -22,16 +22,16 @@ def get_data():
     # Retrieve data from the SQLite database
     cursor.execute("SELECT * FROM example")
     rows = cursor.fetchall()
-    if rows:
-        return [{'name': row[0], 'age': row[1]} for row in rows]
-    else:
-        return []
     
     # Close the cursor and connection
     cursor.close()
     conn.close()
 
-    return data
+    # Check if there are rows, then return the data
+    if rows:
+        return [{'name': row[0], 'age': row[1]} for row in rows]
+    else:
+        return []
 
 @app.post('/post_data')
 def post_data(name: str, age: int):
@@ -41,6 +41,7 @@ def post_data(name: str, age: int):
 
     # Insert data into the SQLite database
     cursor.execute("INSERT INTO example (name, age) VALUES (?, ?)", (name, age))
+    
     conn.commit()
 
     # Close the cursor and connection
