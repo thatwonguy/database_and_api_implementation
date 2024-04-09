@@ -40,4 +40,4 @@ The above examples of sqlite and fastapi shown above with the files should provi
 With this modification you can save the data in a database and allow the end user access to the data via an API instead of direct access to the database.
 
 3. `api_example_sqlite` is a folder that uses sqlite and fastapi, bringing examples 1 and 2 together as a rough example. 
-     - the api created only has `post` and `get` functionality and adding additional functionalities (deletion of data rows) can be added and incorporated. Modify as you see fit for your use-case!
+     - this api and sqlite implementation only has `post` and `get` functionality and adding additional functionalities (deletion of data rows) can be added and incorporated. Modify as you see fit for your use-case!
