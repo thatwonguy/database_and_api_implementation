@@ -33,11 +33,41 @@ Sqlite is a serverless database that holds the data outside of memory but not on
           ```
           - if you followed this example you should see:
           > {"name":"John","age":30}
+
+---
+- ### Below is a demo of how to put *sqlite* and *fastapi* together now.
 ---
 
-The above examples of sqlite and fastapi shown above with the files should provide good foundational knowledge. The next step would be to change the `app.py` script to point to a sqlitedb instead of in-memory data.
+The above examples of sqlite and fastapi shown with the files should provide good foundational knowledge. On how sqlite and fastapi works. The next step would be to change the `app.py` script to point to a sqlitedb instead of in-memory data.
 
 With this modification you can save the data in a database and allow the end user access to the data via an API instead of direct access to the database.
 
 3. `api_example_sqlite` is a folder that uses sqlite and fastapi, bringing examples 1 and 2 together as a rough example. 
      - this api and sqlite implementation only has `post` and `get` functionality and adding additional functionalities (deletion of data rows) can be added and incorporated. Modify as you see fit for your use-case!
+     - `app.py` is initiated by typing the following to start the localhost and create the db and allowing the api-endpoints to be up and running:
+     ```
+     uvicorn app:app --reload
+     ```
+     - `client.py` is then run with the following code to interact with `app.py` using the api-endpoints for get and post:
+     ```
+     python client.py
+     ```
+
+---
+- ### Below is a demo of how to put *sqlalchemy* and *fastapi* together now.
+---
+
+Here we use sqlalchemy instead of sqlite. It is much more robust python library than just a simple serverless sqlitedb. We modify the `app.py` file to utilize class objects to create the database and api layer and then we modify the `client.py` file to mimic an end-user connecting to it. 
+
+With this modification you can save the data in a database and allow the end user access to the data via an API instead of direct access to the database.
+
+4. `api_example_sqlalchemy` is a folder that uses sqlalchemy and fastapi, improving on example 3 above. 
+     - this api and sqlalchemy implementation only has `post` and `get` functionality and adding additional functionalities (deletion of data rows) can be added and incorporated. Modify as you see fit for your use-case!
+     - `app.py` is initiated by typing the following to start the localhost and create the db and allowing the api-endpoints to be up and running:
+     ```
+     uvicorn app:app --reload
+     ```
+     - `client.py` is then run with the following code to interact with `app.py` using the api-endpoints for get and post:
+     ```
+     python client.py
+     ```
