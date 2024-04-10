@@ -6,6 +6,7 @@
 ---
 - ### PREREQUISITES
      - ensure that you pip install all required libraries, ideally in a virtual environment
+     - see the included `requirements.txt` file in the repo
 ---
 Sqlite is a serverless database that holds the data outside of memory but not on the cloud.
 1. `sqlite_user.py` is a standalone file example to demonstrate usage of sqlite
