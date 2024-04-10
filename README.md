@@ -57,7 +57,7 @@ With this modification you can save the data in a database and allow the end use
 - ### Below is a demo of how to put *sqlalchemy* and *fastapi* together now.
 ---
 
-Here we use sqlalchemy instead of sqlite. It is much more robust python library than just a simple serverless sqlitedb. We modify the `app.py` file to utilize class objects to create the database and api layer and then we modify the `client.py` file to mimic an end-user connecting to it. 
+Here we use sqlalchemy instead of sqlite. It is a much more robust python library than just a simple serverless sqlitedb. We modify the `app.py` file to utilize class objects to create the database and api layer and then we modify the `client.py` file to mimic an end-user connecting to it. 
 
 With this modification you can save the data in a database and allow the end user access to the data via an API instead of direct access to the database.
 
