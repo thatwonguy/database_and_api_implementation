@@ -7,9 +7,9 @@
 - ### PREREQUISITES
      - ensure that you pip install all required libraries, ideally in a virtual environment
      - see the included `requirements.txt` file in the repo for a list of all libraries needed. You can install them individually or simply type the following in your IDE bash terminal:
-```
-pip install -r requirements.txt
-```
+     ```
+     pip install -r requirements.txt
+     ```
 ---
 Sqlite is a serverless database that holds the data outside of memory but not on the cloud.
 1. `sqlite_user.py` is a standalone file example to demonstrate usage of sqlite
