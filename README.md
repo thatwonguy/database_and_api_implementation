@@ -45,7 +45,7 @@ Sqlite is a serverless database that holds the data outside of memory but not on
 - ### Below is a demo of how to put *sqlite* and *fastapi* together now.
 ---
 
-The above examples of sqlite and fastapi shown with the files should provide good foundational knowledge. On how sqlite and fastapi works. The next step would be to change the `app.py` script to point to a sqlitedb instead of in-memory data.
+The above examples of sqlite and fastapi shown with the files should provide good foundational knowledge on how sqlite and fastapi works. The next step would be to change the `app.py` script to point to a sqlitedb instead of in-memory data.
 
 With this modification you can save the data in a database and allow the end user access to the data via an API instead of direct access to the database.
 
