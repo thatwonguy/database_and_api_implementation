@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # sqlite_implementation
 
 - ### Demo on how to utilize sqlite as a database, which can mimic a cloud-based database.
