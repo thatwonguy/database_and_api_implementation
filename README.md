@@ -1,8 +1,19 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # sqlite_implementation
 
 - ### Demo on how to utilize sqlite as a database, which can mimic a cloud-based database.
 
 - ### Demo on usage of fastapi to utilize endpoints for end-users to tap into data.
+---
+- ### PREREQUISITES
+     - ensure that you pip install all required libraries
+     - see the included `requirements.txt` file in the repo for a list of all libraries needed. You can install them individually or simply type the following in your IDE bash terminal:
+     ```
+     pip install -r requirements.txt
+     ```
+> [!NOTE]
+> Ideally you want to create a virtual environment(venv) for the individual project you are working on and install all the requirements inside the venv after activating it in your terminal to avoid package installation issues with other projects.
 ---
 Sqlite is a serverless database that holds the data outside of memory but not on the cloud.
 1. `sqlite_user.py` is a standalone file example to demonstrate usage of sqlite
@@ -38,11 +49,11 @@ Sqlite is a serverless database that holds the data outside of memory but not on
 - ### Below is a demo of how to put *sqlite* and *fastapi* together now.
 ---
 
-The above examples of sqlite and fastapi shown with the files should provide good foundational knowledge. On how sqlite and fastapi works. The next step would be to change the `app.py` script to point to a sqlitedb instead of in-memory data.
+The above examples of sqlite and fastapi shown with the files should provide good foundational knowledge on how sqlite and fastapi works. The next step would be to change the `app.py` script to point to a sqlitedb instead of in-memory data.
 
 With this modification you can save the data in a database and allow the end user access to the data via an API instead of direct access to the database.
 
-3. `api_example_sqlite` is a folder that uses sqlite and fastapi, bringing examples 1 and 2 together as a rough example. 
+3. `api_example_sqlite` is a folder that uses sqlite and fastapi, bringing examples 1 and 2 together. 
      - this api and sqlite implementation only has `post` and `get` functionality and adding additional functionalities (deletion of data rows) can be added and incorporated. Modify as you see fit for your use-case!
      - `app.py` is initiated by typing the following to start the localhost and create the db and allowing the api-endpoints to be up and running:
      ```
