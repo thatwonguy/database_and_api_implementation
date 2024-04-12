@@ -5,11 +5,13 @@
 - ### Demo on usage of fastapi to utilize endpoints for end-users to tap into data.
 ---
 - ### PREREQUISITES
-     - ensure that you pip install all required libraries, ideally in a virtual environment
+     - ensure that you pip install all required libraries
      - see the included `requirements.txt` file in the repo for a list of all libraries needed. You can install them individually or simply type the following in your IDE bash terminal:
      ```
      pip install -r requirements.txt
      ```
+> [!NOTE]
+> Ideally you want to create a virtual environment(venv) for the individual project you are working on and install all the requirements inside the venv after activating it in your terminal to avoid package installation issues with other projects.
 ---
 Sqlite is a serverless database that holds the data outside of memory but not on the cloud.
 1. `sqlite_user.py` is a standalone file example to demonstrate usage of sqlite
