@@ -14,6 +14,8 @@
      ```
 > [!NOTE]
 > Ideally you want to create a virtual environment(venv) for the individual project you are working on and install all the requirements inside the venv after activating it in your terminal to avoid package installation issues with other projects.
+> Alternatively, a docker/ kubernetes implementation eould be even more powerful for production settings.
+> 
 ---
 Sqlite is a serverless database that holds the data outside of memory but not on the cloud.
 1. `sqlite_user.py` is a standalone file example to demonstrate usage of sqlite
